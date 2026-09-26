@@ -82,6 +82,20 @@ function initNav() {
         if (isNavOpen) toggleNav();
       });
     });
+
+    // Close on click outside
+    document.addEventListener('click', (e) => {
+      if (isNavOpen && !header.contains(e.target)) {
+        toggleNav();
+      }
+    });
+
+    // Close on resize to desktop width
+    window.addEventListener('resize', () => {
+      if (isNavOpen && window.innerWidth >= 900) {
+        toggleNav();
+      }
+    }, { passive: true });
   }
 }
 
