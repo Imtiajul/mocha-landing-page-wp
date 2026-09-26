@@ -1,0 +1,11 @@
+{
+  "name": "AOSE — Pure Matcha",
+  "short_name": "AOSE",
+  "icons": [
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" }
+  ],
+  "theme_color": "#1E4A1C",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "start_url": "/"
+}

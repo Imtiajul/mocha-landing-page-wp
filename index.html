@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AOSE — Pure Matcha for Everyday Wellness</title>
+  <meta name="description" content="AOSE is a pure matcha ritual designed for everyday wellness. Discover ceremonial-grade matcha for steadier energy, calmer focus, and natural balance.">
+  <meta name="theme-color" content="#1E4A1C">
+  <meta name="color-scheme" content="light">
+  <link rel="canonical" href="https://aose.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aose.com/">
+  <meta property="og:title" content="AOSE — Pure Matcha for Everyday Wellness">
+  <meta property="og:description" content="A simple matcha ritual designed to bring steadier energy, calmer focus, and a little more balance into your everyday.">
+  <meta property="og:image" content="https://aose.com/assets/images/hero.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AOSE — Pure Matcha for Everyday Wellness">
+  <meta name="twitter:description" content="A simple matcha ritual designed to bring steadier energy, calmer focus, and a little more balance into your everyday.">
+  <meta name="twitter:image" content="https://aose.com/assets/images/hero.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap&subset=latin" as="style">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap&subset=latin">
+
+  <!-- Hero Image Preload -->
+  <link rel="preload" as="image" href="assets/images/hero.jpg" fetchpriority="high">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://aose.com/#organization",
+        "name": "AOSE",
+        "url": "https://aose.com",
+        "logo": "https://aose.com/favicon.svg",
+        "description": "Pure matcha for everyday wellness.",
+        "sameAs": [
+          "https://instagram.com/aose",
+          "https://tiktok.com/@aose",
+          "https://pinterest.com/aose"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://aose.com/#website",
+        "url": "https://aose.com",
+        "name": "AOSE",
+        "publisher": { "@id": "https://aose.com/#organization" }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Main JS (deferred module) -->
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="page-wrapper">
+    <div class="page-frame">
+
+      <!-- ============================
+           0. Announcement Bar
+           ============================ -->
+      <div class="announcement" role="marquee" aria-label="Brand highlights">
+        <div class="announcement__track">
+          <span class="announcement__content">PURE MATCHA &bull; STEADY ENERGY &bull; CALM FOCUS &bull; DAILY BALANCE &bull; CLEAN RITUAL &bull; EVERYDAY WELLNESS</span>
+          <span class="announcement__content" aria-hidden="true">PURE MATCHA &bull; STEADY ENERGY &bull; CALM FOCUS &bull; DAILY BALANCE &bull; CLEAN RITUAL &bull; EVERYDAY WELLNESS</span>
+        </div>
+      </div>
+
+      <!-- ============================
+           1. Header
+           ============================ -->
+      <header class="header" role="banner">
+        <div class="header__inner">
+          <a href="/" class="header__logo" aria-label="AOSE home">
+            <svg class="header__logo-icon" width="32" height="32" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle cx="38" cy="38" r="18" fill="#7DB92E" opacity="0.85"/>
+              <circle cx="62" cy="38" r="18" fill="#7DB92E" opacity="0.85"/>
+              <circle cx="38" cy="62" r="18" fill="#7DB92E" opacity="0.85"/>
+              <circle cx="62" cy="62" r="18" fill="#7DB92E" opacity="0.85"/>
+            </svg>
+            <span class="header__logo-text">AOSE</span>
+          </a>
+
+          <nav class="header__nav" aria-label="Primary">
+            <button class="header__search" type="button" aria-label="Search">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <circle cx="11" cy="11" r="8"/>
+                <path d="M21 21l-4.35-4.35"/>
+              </svg>
+            </button>
+            <a href="/" class="header__nav-link header__nav-link--active" aria-current="page">Home</a>
+            <a href="#wellness-title" class="header__nav-link">Benefits</a>
+            <a href="#ritual-title" class="header__nav-link">Ritual</a>
+            <a href="#steps-title" class="header__nav-link">Recipes</a>
+            <a href="#leaf-title" class="header__nav-link">Journal</a>
+          </nav>
+
+          <a href="#footer-newsletter" class="header__cta pill-btn pill-btn--outline">Start Your Ritual</a>
+
+          <button class="header__mobile-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <nav class="header__mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+          <a href="/" class="header__nav-link header__nav-link--active" aria-current="page">Home</a>
+          <a href="#wellness-title" class="header__nav-link">Benefits</a>
+          <a href="#ritual-title" class="header__nav-link">Ritual</a>
+          <a href="#steps-title" class="header__nav-link">Recipes</a>
+          <a href="#leaf-title" class="header__nav-link">Journal</a>
+          <a href="#footer-newsletter" class="pill-btn pill-btn--outline" style="width:100%;justify-content:center;">Start Your Ritual</a>
+        </nav>
+      </header>
+
+      <!-- ============================
+           2. Hero
+           ============================ -->
+      <main id="main" tabindex="-1">
+        <section class="hero" aria-labelledby="hero-title">
+          <img
+            class="hero__media"
+            src="assets/images/hero.jpg"
+            alt="Ceramic matcha bowl filled with vivid green frothy matcha, bamboo whisk, scattered tea leaves and pink cherry blossom petals under a bright blue sky"
+            width="1600"
+            height="900"
+            fetchpriority="high"
+            decoding="async"
+          >
+
+          <!-- Floating petals -->
+          <div class="hero__petals" aria-hidden="true">
+            <svg class="hero__petal" style="top:10%;left:5%;width:24px;" viewBox="0 0 24 24" fill="#F6C4D2" opacity="0.7"><ellipse cx="12" cy="12" rx="6" ry="10" transform="rotate(-30 12 12)"/></svg>
+            <svg class="hero__petal" style="top:20%;right:15%;width:18px;" viewBox="0 0 24 24" fill="#F6C4D2" opacity="0.5"><ellipse cx="12" cy="12" rx="5" ry="9" transform="rotate(15 12 12)"/></svg>
+            <svg class="hero__petal" style="top:60%;left:12%;width:20px;" viewBox="0 0 24 24" fill="#FDE3EA" opacity="0.6"><ellipse cx="12" cy="12" rx="6" ry="10" transform="rotate(-45 12 12)"/></svg>
+            <svg class="hero__petal" style="bottom:30%;right:8%;width:22px;" viewBox="0 0 24 24" fill="#F6C4D2" opacity="0.5"><ellipse cx="12" cy="12" rx="5" ry="9" transform="rotate(20 12 12)"/></svg>
+            <svg class="hero__petal" style="top:40%;left:80%;width:16px;" viewBox="0 0 24 24" fill="#FDE3EA" opacity="0.4"><ellipse cx="12" cy="12" rx="5" ry="8" transform="rotate(-10 12 12)"/></svg>
+            <svg class="hero__petal" style="bottom:15%;left:40%;width:20px;" viewBox="0 0 24 24" fill="#F6C4D2" opacity="0.6"><ellipse cx="12" cy="12" rx="6" ry="10" transform="rotate(35 12 12)"/></svg>
+          </div>
+
+          <div class="hero__content">
+            <div class="hero__top">
+              <h1 id="hero-title" class="hero__title">
+                matcha
+                <span class="hero__sticker sticker sticker--lime" aria-hidden="true">seasonal edit</span>
+              </h1>
+
+              <div class="hero__info">
+                <p class="hero__info-label">
+                  <span class="sticker sticker--pink" style="width:12px;height:12px;padding:0;display:inline-block;border-radius:50%;margin-right:4px;" aria-hidden="true"></span>
+                  <span class="sticker sticker--lime" style="width:12px;height:12px;padding:0;display:inline-block;border-radius:50%;margin-right:4px;" aria-hidden="true"></span>
+                  Made for everyday
+                </p>
+                <p class="hero__info-text">A simple matcha ritual designed to bring steadier energy, calmer focus, and a little more balance into your everyday.</p>
+              </div>
+            </div>
+
+            <ul class="hero__tags" role="list">
+              <li class="hero__tag"><em>ceremonial</em></li>
+              <li class="hero__tag"><em>whisked</em></li>
+              <li class="hero__tag"><em>seasonal</em></li>
+              <li class="hero__tag"><em>creamy</em></li>
+              <li class="hero__tag"><em>smooth</em></li>
+              <li class="hero__tag"><em>refreshing</em></li>
+              <li class="hero__tag"><em>floral</em></li>
+              <li class="hero__tag"><em>bright</em></li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============================
+             3. Ritual Intro + Product Cards
+             ============================ -->
+        <section class="ritual reveal" aria-labelledby="ritual-title">
+          <div class="container">
+            <p class="eyebrow ritual__eyebrow">
+              <span class="eyebrow__dot" aria-hidden="true"></span>
+              The AOSE Ritual
+            </p>
+            <h2 id="ritual-title" class="ritual__title">
+              a small ritual for slower, <em>better days.</em>
+              <span class="ritual__sticker sticker sticker--pink" aria-hidden="true" style="transform:rotate(12deg)">daily ritual</span>
+              <span class="ritual__sticker sticker sticker--lime" aria-hidden="true" style="transform:rotate(-8deg);left:15%;top:-15px;right:auto;">made fresh</span>
+            </h2>
+
+            <div class="ritual__cards">
+              <!-- Card 1: Pure -->
+              <article class="ritual__card">
+                <p class="ritual__card-badge">Pure</p>
+                <p class="ritual__card-subtitle">Traditional Ceremonial</p>
+                <div class="ritual__card-image">
+                  <img
+                    src="assets/images/product-pure.jpg"
+                    alt="Glass of vibrant green ceremonial matcha on a wooden coaster with a soft pink backdrop"
+                    width="400"
+                    height="500"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </div>
+                <a href="#" class="ritual__card-btn pill-btn pill-btn--outline">Explore</a>
+              </article>
+
+              <!-- Card 2: Creamy -->
+              <article class="ritual__card">
+                <p class="ritual__card-badge">Creamy</p>
+                <p class="ritual__card-subtitle">Iced Matcha Latte</p>
+                <div class="ritual__card-image">
+                  <img
+                    src="assets/images/product-creamy.jpg"
+                    alt="Layered iced matcha latte in a tall glass showing green and white milk layers"
+                    width="400"
+                    height="500"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </div>
+                <a href="#" class="ritual__card-btn pill-btn pill-btn--outline">Explore</a>
+              </article>
+
+              <!-- Card 3: Bright -->
+              <article class="ritual__card">
+                <p class="ritual__card-badge">Bright</p>
+                <p class="ritual__card-subtitle">Strawberry Matcha</p>
+                <div class="ritual__card-image">
+                  <img
+                    src="assets/images/product-bright.jpg"
+                    alt="Strawberry matcha layered drink with pink and green gradients in a clear glass"
+                    width="400"
+                    height="500"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </div>
+                <a href="#" class="ritual__card-btn pill-btn pill-btn--outline">Explore</a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================
+             4. Everyday Wellness (dark green)
+             ============================ -->
+        <section class="wellness reveal" aria-labelledby="wellness-title">
+          <div class="container">
+            <div class="wellness__header">
+              <div class="wellness__header-text">
+                <p class="eyebrow wellness__eyebrow">
+                  <svg class="eyebrow__icon" width="16" height="16" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+                    <circle cx="38" cy="38" r="14" fill="currentColor" opacity="0.8"/>
+                    <circle cx="62" cy="38" r="14" fill="currentColor" opacity="0.8"/>
+                    <circle cx="38" cy="62" r="14" fill="currentColor" opacity="0.8"/>
+                    <circle cx="62" cy="62" r="14" fill="currentColor" opacity="0.8"/>
+                  </svg>
+                  Everyday Wellness
+                </p>
+                <h2 id="wellness-title" class="wellness__title">
+                  matcha made to feel good, <em>every day.</em>
+                  <span class="wellness__sticker sticker sticker--lime" aria-hidden="true">clean energy</span>
+                </h2>
+                <p class="wellness__text">Pure matcha brings smoother energy, calmer focus, and a simple sense of balance into your everyday routine.</p>
+              </div>
+              <div class="wellness__arrows">
+                <button class="wellness__arrow wellness__arrow--prev" type="button" aria-label="Previous slide" disabled>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M19 12H5"/>
+                    <path d="M12 19l-7-7 7-7"/>
+                  </svg>
+                </button>
+                <button class="wellness__arrow wellness__arrow--next" type="button" aria-label="Next slide">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M5 12h14"/>
+                    <path d="M12 5l7 7-7 7"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="wellness__grid">
+              <div class="wellness__left">
+                <div class="wellness__features" role="tablist" aria-label="Wellness benefits">
+                  <button class="wellness__feature wellness__feature--active" role="tab" aria-selected="true" tabindex="0">
+                    <div class="wellness__feature-icon" aria-hidden="true">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                      </svg>
+                    </div>
+                    <p class="wellness__feature-title">Morning Energy</p>
+                    <p class="wellness__feature-text">A smoother lift to start your day.</p>
+                  </button>
+
+                  <button class="wellness__feature" role="tab" aria-selected="false" tabindex="-1">
+                    <div class="wellness__feature-icon" aria-hidden="true">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                        <path d="M18 8h1a4 4 0 010 8h-1"/>
+                        <path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/>
+                        <line x1="6" y1="1" x2="6" y2="4"/>
+                        <line x1="10" y1="1" x2="10" y2="4"/>
+                        <line x1="14" y1="1" x2="14" y2="4"/>
+                      </svg>
+                    </div>
+                    <p class="wellness__feature-title">Midday Reset</p>
+                    <p class="wellness__feature-text">A refreshing pause to recharge.</p>
+                  </button>
+
+                  <button class="wellness__feature" role="tab" aria-selected="false" tabindex="-1">
+                    <div class="wellness__feature-icon" aria-hidden="true">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5"/>
+                        <path d="M2 12l10 5 10-5"/>
+                      </svg>
+                    </div>
+                    <p class="wellness__feature-title">Calm Focus</p>
+                    <p class="wellness__feature-text">Clearer focus, without the rush.</p>
+                  </button>
+
+                  <button class="wellness__feature" role="tab" aria-selected="false" tabindex="-1">
+                    <div class="wellness__feature-icon" aria-hidden="true">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                      </svg>
+                    </div>
+                    <p class="wellness__feature-title">Daily Balance</p>
+                    <p class="wellness__feature-text">An easy ritual to come back to.</p>
+                  </button>
+                </div>
+              </div>
+
+              <div class="wellness__right">
+                <div class="wellness__carousel" tabindex="0" aria-label="Wellness imagery" role="region" aria-roledescription="carousel" style="scroll-snap-type:x mandatory;">
+                  <div class="wellness__slide" role="group" aria-roledescription="slide" aria-label="1 of 4" style="scroll-snap-align:start;">
+                    <img
+                      src="assets/images/wellness-whisk.jpg"
+                      alt="Close-up of a bamboo whisk in a bowl of frothy green matcha"
+                      width="600"
+                      height="800"
+                      loading="lazy"
+                      decoding="async"
+                    >
+                  </div>
+                  <div class="wellness__slide" role="group" aria-roledescription="slide" aria-label="2 of 4" style="scroll-snap-align:start;">
+                    <img
+                      src="assets/images/wellness-iced.jpg"
+                      alt="Iced green matcha drink in a glass with condensation and a metal straw"
+                      width="600"
+                      height="800"
+                      loading="lazy"
+                      decoding="async"
+                    >
+                  </div>
+                  <div class="wellness__slide" role="group" aria-roledescription="slide" aria-label="3 of 4" style="scroll-snap-align:start;">
+                    <img
+                      src="assets/images/product-pure.jpg"
+                      alt="Pure green matcha in a clear glass on a wooden coaster"
+                      width="600"
+                      height="800"
+                      loading="lazy"
+                      decoding="async"
+                    >
+                  </div>
+                  <div class="wellness__slide" role="group" aria-roledescription="slide" aria-label="4 of 4" style="scroll-snap-align:start;">
+                    <img
+                      src="assets/images/product-creamy.jpg"
+                      alt="Creamy iced matcha latte with layers of green and white"
+                      width="600"
+                      height="800"
+                      loading="lazy"
+                      decoding="async"
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================
+             5. Keep It Simple — 4 Steps
+             ============================ -->
+        <section class="steps reveal" aria-labelledby="steps-title">
+          <div class="container">
+            <p class="eyebrow steps__eyebrow">
+              <span class="eyebrow__dot" aria-hidden="true"></span>
+              Keep It Simple
+            </p>
+            <h2 id="steps-title" class="steps__title">
+              a better matcha ritual, <em>in four simple steps</em>
+              <span class="steps__sticker sticker sticker--pink" aria-hidden="true" style="transform:rotate(-15deg)">step by step</span>
+              <span class="steps__sticker sticker sticker--lime" aria-hidden="true" style="transform:rotate(10deg);right:15%;left:auto;top:-25px;">easy</span>
+            </h2>
+            <p class="steps__subtitle">A simple routine for making matcha part of your everyday.</p>
+
+            <ol class="steps__list">
+              <li class="steps__item">
+                <div class="steps__item-header">
+                  <span class="steps__number">1</span>
+                  <span class="steps__word">scoop</span>
+                </div>
+                <div class="steps__band">
+                  <img
+                    src="assets/images/nature-whisk-powder.jpg"
+                    alt="Bamboo scoop with bright green matcha powder"
+                    width="500"
+                    height="300"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                  <p class="steps__caption">Measure a scoop of vibrant matcha powder into your favourite bowl or cup.</p>
+                </div>
+              </li>
+
+              <li class="steps__item">
+                <div class="steps__item-header">
+                  <span class="steps__number">2</span>
+                  <span class="steps__word">pour</span>
+                </div>
+                <div class="steps__band">
+                  <img
+                    src="assets/images/product-pure.jpg"
+                    alt="Water being poured over matcha powder"
+                    width="500"
+                    height="300"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                  <p class="steps__caption">Add a small splash of hot water, just enough to form a smooth, vivid paste.</p>
+                </div>
+              </li>
+
+              <li class="steps__item steps__item--active">
+                <div class="steps__item-header">
+                  <span class="steps__number">3</span>
+                  <span class="steps__word"><em>whisk</em></span>
+                </div>
+                <div class="steps__band">
+                  <img
+                    src="assets/images/step-whisk.jpg"
+                    alt="Bamboo whisk creating froth in a bowl of bright green matcha"
+                    width="500"
+                    height="300"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                  <p class="steps__caption">Whisk gently until the texture turns smooth, light, and softly frothy.</p>
+                </div>
+              </li>
+
+              <li class="steps__item">
+                <div class="steps__item-header">
+                  <span class="steps__number">4</span>
+                  <span class="steps__word">enjoy</span>
+                </div>
+                <div class="steps__band">
+                  <img
+                    src="assets/images/balance-latte.jpg"
+                    alt="A finished matcha latte ready to enjoy"
+                    width="500"
+                    height="300"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                  <p class="steps__caption">Sip slowly and let the calm, steady energy settle into your day.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- ============================
+             6. Pure by Nature
+             ============================ -->
+        <section class="nature reveal" aria-labelledby="nature-title">
+          <div class="nature__image">
+            <img
+              src="assets/images/nature-whisk-powder.jpg"
+              alt="Bamboo whisk beside a scattered pile of bright green matcha powder on a white background"
+              width="800"
+              height="533"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+          <div class="nature__content">
+            <p class="eyebrow nature__eyebrow">
+              <span class="eyebrow__dot" aria-hidden="true"></span>
+              Pure by Nature
+            </p>
+            <h2 id="nature-title" class="nature__title">
+              simple by nature, <em>powerful in every cup.</em>
+              <span class="nature__sticker sticker sticker--pink" aria-hidden="true" style="transform:rotate(10deg)">natural</span>
+              <span class="nature__sticker sticker sticker--lime" aria-hidden="true" style="transform:rotate(-8deg);right:auto;left:0;top:-25px;">whole leaf</span>
+            </h2>
+            <div>
+              <div class="nature__thumb">
+                <img
+                  src="assets/images/nature-iced.jpg"
+                  alt="Iced matcha on a pink backdrop"
+                  width="140"
+                  height="140"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+              <p class="nature__text">Pure matcha keeps things refreshingly simple. Whole tea leaves are finely ground into a vibrant powder, bringing their naturally occurring caffeine, L-theanine, and plant compounds directly into every cup.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================
+             7. Balance Showcase
+             ============================ -->
+        <section class="balance reveal" aria-labelledby="balance-heading">
+          <h2 id="balance-heading" class="visually-hidden">Balance in every cup</h2>
+
+          <div class="balance__left">
+            <div class="balance__photo">
+              <img
+                src="assets/images/balance-latte.jpg"
+                alt="Matcha latte with beautiful green latte art in a white ceramic cup"
+                width="280"
+                height="210"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <p class="balance__caption">The result is a ritual that feels as good as it tastes: smooth energy, a calmer sense of focus, and an easy way to bring a little more balance into the everyday.</p>
+          </div>
+
+          <span class="balance__word gradient-word" aria-hidden="true">balance</span>
+
+          <div class="balance__cutout" aria-hidden="true">
+            <img
+              src="assets/images/balance-sieve.jpg"
+              alt=""
+              width="300"
+              height="400"
+              loading="lazy"
+              decoding="async"
+              style="transform:rotate(-5deg);"
+            >
+          </div>
+        </section>
+
+        <!-- ============================
+             8. From Leaf to Cup (dark green)
+             ============================ -->
+        <section class="leaf reveal" aria-labelledby="leaf-title">
+          <div class="container">
+            <p class="eyebrow leaf__eyebrow">
+              <svg class="eyebrow__icon" width="16" height="16" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+                <circle cx="38" cy="38" r="14" fill="currentColor" opacity="0.8"/>
+                <circle cx="62" cy="38" r="14" fill="currentColor" opacity="0.8"/>
+                <circle cx="38" cy="62" r="14" fill="currentColor" opacity="0.8"/>
+                <circle cx="62" cy="62" r="14" fill="currentColor" opacity="0.8"/>
+              </svg>
+              From Leaf to Cup
+            </p>
+            <h2 id="leaf-title" class="leaf__title">
+              grown slowly under careful shade, <em>kept simple.</em>
+              <span class="leaf__sticker sticker sticker--lime" aria-hidden="true" style="transform:rotate(12deg)">shade grown</span>
+              <span class="leaf__sticker sticker sticker--pink" aria-hidden="true" style="transform:rotate(-10deg);right:auto;left:25%;top:-20px;">stone ground</span>
+            </h2>
+
+            <div class="wellness__grid">
+              <div>
+                <ul class="leaf__list" role="list">
+                  <li>Carefully Grown Under Shade</li>
+                  <li>Made From Whole Leaves</li>
+                  <li>Slowly Ground Into Powder</li>
+                </ul>
+              </div>
+              <div class="leaf__text-col">
+                <p class="leaf__text">Great matcha begins long before it reaches the bowl. Tea leaves are grown under careful shade, helping develop their vibrant colour, smooth character, and naturally rich flavour.</p>
+                <p class="leaf__text" style="margin-top:16px;">Once harvested, the leaves are gently processed and slowly ground into a fine powder, keeping matcha close to its simplest form: whole, vibrant, and naturally pure.</p>
+              </div>
+            </div>
+
+            <div class="leaf__cards">
+              <!-- Shade Grown -->
+              <div class="leaf__card">
+                <div class="leaf__card-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66L7 19"/>
+                    <path d="M2 2s4.74 3 7.5 3C12.25 5 15 2 15 2s2.13 3.21 3.29 4.57C19.45 7.93 22 10 22 10s-3.35 1.45-4.93 3.5"/>
+                  </svg>
+                </div>
+                <p class="leaf__card-title">Shade Grown</p>
+                <p class="leaf__card-text">Carefully shaded to develop a smoother, richer character.</p>
+              </div>
+
+              <!-- Carefully Harvested -->
+              <div class="leaf__card">
+                <div class="leaf__card-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                    <path d="M13.73 21a2 2 0 01-3.46 0"/>
+                    <path d="M7 8a5 5 0 0110 0"/>
+                  </svg>
+                </div>
+                <p class="leaf__card-title">Carefully Harvested</p>
+                <p class="leaf__card-text">Young leaves are selected at their freshest and most vibrant.</p>
+              </div>
+
+              <!-- Slowly Stone Ground -->
+              <div class="leaf__card">
+                <div class="leaf__card-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <circle cx="12" cy="12" r="10"/>
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M12 2v4"/>
+                    <path d="M12 18v4"/>
+                    <path d="M2 12h4"/>
+                    <path d="M18 12h4"/>
+                  </svg>
+                </div>
+                <p class="leaf__card-title">Slowly Stone Ground</p>
+                <p class="leaf__card-text">Gently milled for a fine powder, smooth, and silky texture.</p>
+              </div>
+
+              <!-- Nothing Unnecessary -->
+              <div class="leaf__card">
+                <div class="leaf__card-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <path d="M9 12l2 2 4-4"/>
+                  </svg>
+                </div>
+                <p class="leaf__card-title">Nothing Unnecessary</p>
+                <p class="leaf__card-text">Pure matcha with no added flavours, colours, or extras.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================
+             9. Full-Bleed Image Band
+             ============================ -->
+        <section class="band reveal" aria-label="Matcha among cherry blossoms">
+          <img
+            class="band__image"
+            src="assets/images/band-blossoms.jpg"
+            alt="Ceramic matcha bowl with bamboo whisk surrounded by pink cherry blossoms under a bright blue sky"
+            width="1600"
+            height="700"
+            loading="lazy"
+            decoding="async"
+          >
+        </section>
+
+      </main>
+
+      <!-- ============================
+           10. Footer
+           ============================ -->
+      <footer class="footer" role="contentinfo">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <p class="footer__tagline">matcha, <em>made part of every day.</em></p>
+            <a href="#" class="footer__cta pill-btn pill-btn--outline">Get Started</a>
+          </div>
+
+          <div class="footer__links">
+            <div class="footer__links-group">
+              <h3 class="footer__links-title">Explore</h3>
+              <a href="#wellness-title" class="footer__link">Benefits</a>
+              <a href="#ritual-title" class="footer__link">Ritual</a>
+              <a href="#steps-title" class="footer__link">Recipes</a>
+              <a href="#leaf-title" class="footer__link">Journal</a>
+            </div>
+            <div class="footer__links-group">
+              <h3 class="footer__links-title">About</h3>
+              <a href="#" class="footer__link">Our Story</a>
+              <a href="#leaf-title" class="footer__link">From Leaf To Cup</a>
+              <a href="#" class="footer__link">FAQ</a>
+              <a href="#" class="footer__link">Contact</a>
+            </div>
+          </div>
+
+          <div class="footer__social-section">
+            <h3 class="footer__links-title">Social Media</h3>
+            <div class="footer__social">
+              <a href="https://instagram.com/aose" class="footer__social-link" aria-label="Follow AOSE on Instagram" rel="noopener noreferrer" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+              </a>
+              <a href="https://tiktok.com/@aose" class="footer__social-link" aria-label="Follow AOSE on TikTok" rel="noopener noreferrer" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                  <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.43V13a8.16 8.16 0 005.58 2.18V11.7a4.83 4.83 0 01-3.77-1.24V6.69h3.77z"/>
+                </svg>
+              </a>
+              <a href="https://pinterest.com/aose" class="footer__social-link" aria-label="Follow AOSE on Pinterest" rel="noopener noreferrer" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.08 3.15 9.43 7.6 11.21-.1-.95-.19-2.41.04-3.45.21-.94 1.36-5.76 1.36-5.76s-.35-.69-.35-1.71c0-1.6.93-2.8 2.09-2.8.98 0 1.46.74 1.46 1.63 0 .99-.63 2.47-.96 3.85-.27 1.15.58 2.09 1.71 2.09 2.06 0 3.64-2.17 3.64-5.3 0-2.77-1.99-4.71-4.84-4.71-3.3 0-5.23 2.47-5.23 5.02 0 .99.38 2.06.86 2.64.09.11.1.21.08.32-.09.38-.29 1.15-.33 1.31-.05.22-.18.26-.41.16C5.96 15.56 5 13.82 5 12.04 5 8.46 7.57 5.18 12.38 5.18c3.79 0 6.73 2.7 6.73 6.3 0 3.76-2.37 6.79-5.67 6.79-1.11 0-2.15-.58-2.5-1.26l-.68 2.6c-.25.93-.91 2.1-1.36 2.81C10.05 23.54 11 23.75 12 23.75c6.63 0 12-5.37 12-12S18.63 0 12 0z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__newsletter" id="footer-newsletter">
+          <div class="footer__newsletter-row">
+            <div class="footer__newsletter-info">
+              <p class="footer__newsletter-text">Simple rituals, matcha notes, and fresh inspiration straight to your inbox.</p>
+              <form class="footer__newsletter-form" novalidate>
+                <label for="newsletter-email" class="visually-hidden">Email address</label>
+                <input
+                  type="email"
+                  id="newsletter-email"
+                  class="footer__newsletter-input"
+                  placeholder="Enter Your Email"
+                  autocomplete="email"
+                  required
+                >
+                <button type="submit" class="footer__newsletter-btn pill-btn pill-btn--filled">Join the Ritual</button>
+              </form>
+              <p class="footer__newsletter-error" id="newsletter-error" role="alert" aria-live="polite"></p>
+              <p class="footer__newsletter-success" id="newsletter-success" role="status" aria-live="polite"></p>
+            </div>
+            <div class="footer__giant-word-container" aria-hidden="true">
+              <span class="footer__giant-word gradient-word">wellness</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__legal">
+          <p>&copy; 2026 AOSE | all rights reserved</p>
+          <a href="#">Cookie Preferences</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+</body>
+</html>

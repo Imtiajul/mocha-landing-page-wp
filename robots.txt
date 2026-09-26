@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aose.com/sitemap.xml
