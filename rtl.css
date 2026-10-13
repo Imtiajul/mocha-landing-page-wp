@@ -1,0 +1,76 @@
+/**
+ * AOSE Matcha Right-to-Left (RTL) Stylesheet
+ *
+ * Flips layouts, flex orientations, paddings, and margins for RTL languages (Arabic, Hebrew, Persian).
+ *
+ * @package AOSE_Matcha
+ */
+
+html[dir="rtl"],
+body.rtl {
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+/* Header RTL */
+.rtl .header__logo {
+  flex-direction: row;
+}
+
+.rtl .header__search {
+  margin-right: 0;
+  margin-left: 4px;
+}
+
+.rtl .header__mobile-toggle span {
+  transform-origin: center;
+}
+
+/* Hero & Elements */
+.rtl .hero__info {
+  text-align: right;
+}
+
+.rtl .hero__tags {
+  flex-direction: row-reverse;
+}
+
+/* Steps Section */
+.rtl .steps__item {
+  text-align: right;
+}
+
+/* Breadcrumbs RTL */
+.rtl .aose-breadcrumbs__list {
+  flex-direction: row-reverse;
+}
+
+.rtl .aose-breadcrumbs__sep {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+
+/* Footer RTL */
+.rtl .footer__brand {
+  align-items: flex-start;
+  text-align: right;
+}
+
+.rtl .footer__links-group {
+  text-align: right;
+}
+
+.rtl .footer__legal {
+  flex-direction: row-reverse;
+}
+
+/* WooCommerce RTL */
+.rtl.woocommerce span.onsale {
+  right: auto;
+  left: 12px;
+}
+
+.rtl.woocommerce ul.products li.product .price del {
+  margin-right: 0;
+  margin-left: 6px;
+}

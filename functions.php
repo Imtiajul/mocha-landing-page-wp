@@ -3,14 +3,14 @@
  * AOSE Matcha Theme Functions and Definitions
  *
  * @package AOSE_Matcha
- * @version 1.1.0
+ * @version 1.2.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
 
-define( 'AOSE_THEME_VERSION', '1.1.0' );
+define( 'AOSE_THEME_VERSION', '1.2.0' );
 define( 'AOSE_THEME_DIR', get_template_directory() );
 define( 'AOSE_THEME_URI', get_template_directory_uri() );
 
@@ -67,8 +67,83 @@ function aose_theme_setup() {
 
     // Elementor Compatibility Support
     add_theme_support( 'elementor' );
+
+    // WooCommerce Storefront Support
+    add_theme_support( 'woocommerce' );
+    add_theme_support( 'wc-product-gallery-zoom' );
+    add_theme_support( 'wc-product-gallery-lightbox' );
+    add_theme_support( 'wc-product-gallery-slider' );
+
+    // Selective Refresh for Widgets
+    add_theme_support( 'customize-selective-refresh-widgets' );
 }
 add_action( 'after_setup_theme', 'aose_theme_setup' );
+
+/**
+ * Register Astra-style Dynamic Widget Areas.
+ */
+function aose_widgets_init() {
+    register_sidebar(
+        array(
+            'name'          => __( 'Main Sidebar', 'aose-matcha' ),
+            'id'            => 'primary-sidebar',
+            'description'   => __( 'Widgets in this area will be shown on blog archives and pages with sidebars.', 'aose-matcha' ),
+            'before_widget' => '<section id="%1$s" class="widget aose-sidebar__widget glass-card %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h3 class="widget-title aose-sidebar__title">',
+            'after_title'   => '</h3>',
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name'          => __( 'Header Widget Area', 'aose-matcha' ),
+            'id'            => 'header-widget',
+            'description'   => __( 'Widgets in this area appear in the primary header row.', 'aose-matcha' ),
+            'before_widget' => '<div id="%1$s" class="header__widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<span class="visually-hidden">',
+            'after_title'   => '</span>',
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name'          => __( 'Footer Widget 1', 'aose-matcha' ),
+            'id'            => 'footer-widget-1',
+            'description'   => __( 'Left footer column widget area.', 'aose-matcha' ),
+            'before_widget' => '<div id="%1$s" class="footer__widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="footer__links-title">',
+            'after_title'   => '</h3>',
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name'          => __( 'Footer Widget 2', 'aose-matcha' ),
+            'id'            => 'footer-widget-2',
+            'description'   => __( 'Right footer column widget area.', 'aose-matcha' ),
+            'before_widget' => '<div id="%1$s" class="footer__widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="footer__links-title">',
+            'after_title'   => '</h3>',
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name'          => __( 'WooCommerce Shop Sidebar', 'aose-matcha' ),
+            'id'            => 'woocommerce-sidebar',
+            'description'   => __( 'Widgets in this area appear on WooCommerce store and catalog pages.', 'aose-matcha' ),
+            'before_widget' => '<section id="%1$s" class="widget aose-sidebar__widget glass-card %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h3 class="widget-title aose-sidebar__title">',
+            'after_title'   => '</h3>',
+        )
+    );
+}
+add_action( 'widgets_init', 'aose_widgets_init' );
 
 /**
  * Enqueue scripts and styles with zero render-blocking delays.
@@ -89,6 +164,21 @@ function aose_enqueue_scripts() {
         array(),
         AOSE_THEME_VERSION
     );
+
+    // WooCommerce Dedicated Stylesheet
+    if ( class_exists( 'WooCommerce' ) ) {
+        wp_enqueue_style(
+            'aose-woocommerce-style',
+            AOSE_THEME_URI . '/assets/css/woocommerce.css',
+            array( 'aose-custom-style' ),
+            AOSE_THEME_VERSION
+        );
+    }
+
+    // Threaded Comments reply script
+    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+        wp_enqueue_script( 'comment-reply' );
+    }
 
     // Theme main JS (deferred modular vanilla script, zero jQuery dependency)
     wp_enqueue_script(
@@ -113,6 +203,7 @@ function aose_enqueue_scripts() {
     );
 }
 add_action( 'wp_enqueue_scripts', 'aose_enqueue_scripts' );
+
 
 /**
  * Output early preconnect hints, LCP image preloads, and complete SEO meta tags into wp_head.
@@ -300,3 +391,8 @@ function aose_register_elementor_locations( $elementor_theme_manager ) {
     $elementor_theme_manager->register_location( 'archive' );
 }
 add_action( 'elementor/theme/register_locations', 'aose_register_elementor_locations' );
+
+/**
+ * Load Astra-Style Dynamic Customizer Engine.
+ */
+require_once AOSE_THEME_DIR . '/inc/customizer/class-aose-customizer.php';
